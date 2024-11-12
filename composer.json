@@ -20,7 +20,7 @@
       "ext-dom": "1.0",
       "ext-tokenizer": "1.0",
       "ext-xmlwriter": "1.0",
-      "php": "^8.3"
+      "php": "8.3"
     }
   },
   "authors": [
