@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+  test:
+    image: graze/php-alpine:8.0-test
+    volumes:
+      - .:/srv:cached
+    working_dir: /srv
+
+  node:
+    image: node:8
+    expose:
+      - 80
+    volumes:
+      - ./test/server:/srv:delegated
+      - ~/.npm:/root/.npm:delegated
+    working_dir: /srv
+    command: node -- index.js
